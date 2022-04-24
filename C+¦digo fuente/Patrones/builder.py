@@ -148,20 +148,20 @@ if __name__ == "__main__":
     builder = ConcreteBuilder1()
     director.builder = builder
 
-    print("Standard basic product: ")
+    print("producto basico estandar: ")
     director.build_minimal_viable_product()
     builder.product.list_parts()
 
     print("\n")
 
-    print("Standard full featured product: ")
+    print("Producto full: ")
     director.build_full_featured_product()
     builder.product.list_parts()
 
     print("\n")
 
     # Remember, the Builder pattern can be used without a Director class.
-    print("Custom product: ")
+    print("Producto personalizado: ")
     builder.produce_part_a()
     builder.produce_part_b()
     builder.product.list_parts()

@@ -54,12 +54,12 @@ the Implementation interface using that platform's API.
 
 class ConcreteImplementationA(Implementation):
     def operation_implementation(self) -> str:
-        return "ConcreteImplementationA: Here's the result on the platform A."
+        return "ConcreteImplementationA: aqui el resultado de la plataforma a."
 
 
 class ConcreteImplementationB(Implementation):
     def operation_implementation(self) -> str:
-        return "ConcreteImplementationB: Here's the result on the platform B."
+        return "ConcreteImplementationB: aqui el resultado de la plataforma b."
 
 
 def client_code(abstraction: Abstraction) -> None:

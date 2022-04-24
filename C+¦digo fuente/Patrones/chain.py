@@ -95,10 +95,10 @@ if __name__ == "__main__":
 
     # The client should be able to send a request to any handler, not just the
     # first one in the chain.
-    print("Chain: Monkey > Squirrel > Dog\n")
+    print("Cadena: mono > ardilla > perro\n")
     client_code(monkey)
     print("\n")
 
-    print("Subchain: Squirrel > Dog\n")
+    print("subcadena: ardilla > perro\n")
     client_code(squirrel)
     print("\n")

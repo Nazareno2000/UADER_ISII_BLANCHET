@@ -91,13 +91,13 @@ class Invoker:
         command.
         """
 
-        print("Invoker: Does anybody want something done before I begin?")
+        print("invocador:Alguien quiere que se haga algo antes de empezar?")
         if isinstance(self._on_start, Command):
             self._on_start.execute()
 
-        print("Invoker: ...doing something really important...")
+        print("invocador: ...haciendo algo realmente importante...")
 
-        print("Invoker: Does anybody want something done after I finish?")
+        print("invocador: Alguien quiere que se haga algo antes de terminar?")
         if isinstance(self._on_finish, Command):
             self._on_finish.execute()
 
@@ -108,10 +108,10 @@ if __name__ == "__main__":
     """
 
     invoker = Invoker()
-    invoker.set_on_start(SimpleCommand("Say Hi!"))
+    invoker.set_on_start(SimpleCommand("di hola!"))
     receiver = Receiver()
     invoker.set_on_finish(ComplexCommand(
-        receiver, "Send email", "Save report"))
+        receiver, "enviar email", "guardar reporte"))
 
     invoker.do_something_important()
     print("\n")
