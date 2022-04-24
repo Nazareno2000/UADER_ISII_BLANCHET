@@ -70,12 +70,12 @@ Concrete Products are created by corresponding Concrete Factories.
 
 class ConcreteProductA1(AbstractProductA):
     def useful_function_a(self) -> str:
-        return "El resultado del producto A1."
+        return "El resultado del producta A1."
 
 
 class ConcreteProductA2(AbstractProductA):
     def useful_function_a(self) -> str:
-        return "El resultado del producto A2."
+        return "El resultado del producta A2."
 
 
 class AbstractProductB(ABC):
