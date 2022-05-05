@@ -76,13 +76,13 @@ if __name__ == "__main__":
     # Collection classes, depending on the level of indirection you want to keep
     # in your program.
     collection = WordsCollection()
-    collection.add_item("First")
-    collection.add_item("Second")
-    collection.add_item("Third")
+    collection.add_item("primero")
+    collection.add_item("segundo")
+    collection.add_item("tercero")
 
-    print("Straight traversal:")
+    print("Travesía recta:")
     print("\n".join(collection))
     print("")
 
-    print("Reverse traversal:")
+    print("Recorrido inverso:")
     print("\n".join(collection.get_reverse_iterator()), end="")

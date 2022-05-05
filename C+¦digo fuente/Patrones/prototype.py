@@ -87,16 +87,16 @@ if __name__ == "__main__":
 
     # Let's change the list in shallow_copied_component and see if it changes in
     # component.
-    shallow_copied_component.some_list_of_objects.append("another object")
-    if component.some_list_of_objects[-1] == "another object":
+    shallow_copied_component.some_list_of_objects.append("otro objeto")
+    if component.some_list_of_objects[-1] == "otro objecto":
         print(
-            "Adding elements to `shallow_copied_component`'s "
+            "agrega elementos a `shallow_copied_component`'s "
             "some_list_of_objects adds it to `component`'s "
             "some_list_of_objects."
         )
     else:
         print(
-            "Adding elements to `shallow_copied_component`'s "
+            "añade  elemetos to `shallow_copied_component`'s "
             "some_list_of_objects doesn't add it to `component`'s "
             "some_list_of_objects."
         )
