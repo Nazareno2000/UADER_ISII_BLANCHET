@@ -22,7 +22,7 @@ class Context:
         The Context allows changing the State object at runtime.
         """
 
-        print(f"Context: Transition to {type(state).__name__}")
+        print(f"contexto: transaccion a {type(state).__name__}")
         self._state = state
         self._state.context = self
 
@@ -70,21 +70,21 @@ Context.
 
 class ConcreteStateA(State):
     def handle1(self) -> None:
-        print("ConcreteStateA handles request1.")
-        print("ConcreteStateA wants to change the state of the context.")
+        print("ConcreteStateA maneja la solicitud 1.")
+        print("ConcreteStateA quiere cambiar el estado del contexto.")
         self.context.transition_to(ConcreteStateB())
 
     def handle2(self) -> None:
-        print("ConcreteStateA handles request2.")
+        print("ConcreteStateA maneja la solicitud 2.")
 
 
 class ConcreteStateB(State):
     def handle1(self) -> None:
-        print("ConcreteStateB handles request1.")
+        print("ConcreteStateB maneja la solicitud 1.")
 
     def handle2(self) -> None:
-        print("ConcreteStateB handles request2.")
-        print("ConcreteStateB wants to change the state of the context.")
+        print("ConcreteStateB maneja la solicitud 2.")
+        print("ConcreteStateB quiere cambiar el estado del contexto.")
         self.context.transition_to(ConcreteStateA())
 
 
