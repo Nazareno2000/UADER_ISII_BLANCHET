@@ -51,7 +51,7 @@ def client_code(target: "Target") -> None:
 
 
 if __name__ == "__main__":
-    print("Cliente: solo puedo trabajar con los obejotos objetivos:")
+    print("Cliente: solo puedo trabajar con los obejotos objetivoss:")
     target = Target()
     client_code(target)
     print("\n")
