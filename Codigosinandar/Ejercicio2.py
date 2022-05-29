@@ -20,7 +20,7 @@ class Adaptee:
 
 
     def specific_request(self) -> str:
-        return "puerto seriee"
+        return "puerto serie"
 
 
 class Adapter(Target, Adaptee):
