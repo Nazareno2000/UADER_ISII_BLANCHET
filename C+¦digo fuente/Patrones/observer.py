@@ -50,7 +50,7 @@ class ConcreteSubject(Subject):
     """
 
     def attach(self, observer: Observer) -> None:
-        print("Subject: Attached an observer.")
+        print("Asunto: Adjunto un observador.")
         self._observers.append(observer)
 
     def detach(self, observer: Observer) -> None:
@@ -65,7 +65,7 @@ class ConcreteSubject(Subject):
         Trigger an update in each subscriber.
         """
 
-        print("Subject: Notifying observers...")
+        print("Asunto: Notificación a las observadoras ...")
         for observer in self._observers:
             observer.update(self)
 
@@ -77,10 +77,10 @@ class ConcreteSubject(Subject):
         happen (or after it).
         """
 
-        print("\nSubject: I'm doing something important.")
+        print("\nAsunto: Estoy haciendo algo importante.")
         self._state = randrange(0, 10)
 
-        print(f"Subject: My state has just changed to: {self._state}")
+        print(f"Asunto: Mi estado acaba de cambiar a: {self._state}")
         self.notify()
 
 
@@ -106,13 +106,13 @@ attached to.
 class ConcreteObserverA(Observer):
     def update(self, subject: Subject) -> None:
         if subject._state < 3:
-            print("ConcreteObserverA: Reacted to the event")
+            print("ConcreteObserverA: reaccionó al evento")
 
 
 class ConcreteObserverB(Observer):
     def update(self, subject: Subject) -> None:
         if subject._state == 0 or subject._state >= 2:
-            print("ConcreteObserverB: Reacted to the event")
+            print("ConcreteObserverB: reaccionó al evento")
 
 
 if __name__ == "__main__":

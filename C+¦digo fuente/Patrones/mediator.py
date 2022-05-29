@@ -22,10 +22,10 @@ class ConcreteMediator(Mediator):
 
     def notify(self, sender: object, event: str) -> None:
         if event == "A":
-            print("Mediator reacts on A and triggers following operations:")
+            print("El mediador reacciona en A y desencadena las siguientes operaciones:")
             self._component2.do_c()
         elif event == "D":
-            print("Mediator reacts on D and triggers following operations:")
+            print("El mediador reacciona en D y desencadena las siguientes operaciones:")
             self._component1.do_b()
             self._component2.do_c()
 
@@ -56,21 +56,21 @@ components. They also don't depend on any concrete mediator classes.
 
 class Component1(BaseComponent):
     def do_a(self) -> None:
-        print("Component 1 does A.")
+        print("Component 1 hace A.")
         self.mediator.notify(self, "A")
 
     def do_b(self) -> None:
-        print("Component 1 does B.")
+        print("Component 1 hace B.")
         self.mediator.notify(self, "B")
 
 
 class Component2(BaseComponent):
     def do_c(self) -> None:
-        print("Component 2 does C.")
+        print("Component 2 hace C.")
         self.mediator.notify(self, "C")
 
     def do_d(self) -> None:
-        print("Component 2 does D.")
+        print("Component 2 hace D.")
         self.mediator.notify(self, "D")
 
 
@@ -80,10 +80,10 @@ if __name__ == "__main__":
     c2 = Component2()
     mediator = ConcreteMediator(c1, c2)
 
-    print("Client triggers operation A.")
+    print("El cliente activa la operación A.")
     c1.do_a()
 
     print("\n", end="")
 
-    print("Client triggers operation D.")
+    print("El cliente activa la operación D.")
     c2.do_d()

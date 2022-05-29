@@ -27,13 +27,13 @@ class AbstractClass(ABC):
     # These operations already have implementations.
 
     def base_operation1(self) -> None:
-        print("AbstractClass says: I am doing the bulk of the work")
+        print("Abstract Class dice: Estoy haciendo la mayor parte del trabajo")
 
     def base_operation2(self) -> None:
-        print("AbstractClass says: But I let subclasses override some operations")
+        print("AbstractClass dice: Pero dejo que las subclases anulen algunas operaciones")
 
     def base_operation3(self) -> None:
-        print("AbstractClass says: But I am doing the bulk of the work anyway")
+        print("Abstract Class dice: Pero de todos modos estoy haciendo la mayor parte del trabajo")
 
     # These operations have to be implemented in subclasses.
 
@@ -64,10 +64,10 @@ class ConcreteClass1(AbstractClass):
     """
 
     def required_operations1(self) -> None:
-        print("ConcreteClass1 says: Implemented Operation1")
+        print("ConcreteClass1 dice: Operación implementada1")
 
     def required_operations2(self) -> None:
-        print("ConcreteClass1 says: Implemented Operation2")
+        print("ConcreteClass1 dice: Implementado Operation2")
 
 
 class ConcreteClass2(AbstractClass):
@@ -77,13 +77,13 @@ class ConcreteClass2(AbstractClass):
     """
 
     def required_operations1(self) -> None:
-        print("ConcreteClass2 says: Implemented Operation1")
+        print("ConcreteClass2 dice: Implementado Operation1")
 
     def required_operations2(self) -> None:
-        print("ConcreteClass2 says: Implemented Operation2")
+        print("ConcreteClass2 dice: Implementado Operation2")
 
     def hook1(self) -> None:
-        print("ConcreteClass2 says: Overridden Hook1")
+        print("ConcreteClass2 dice: Anulado Hook1")
 
 
 def client_code(abstract_class: AbstractClass) -> None:
@@ -99,7 +99,7 @@ def client_code(abstract_class: AbstractClass) -> None:
 
 
 if __name__ == "__main__":
-    print("Same client code can work with different subclasses:")
+    print("El mismo código de cliente puede funcionar con diferentes subclases:")
     client_code(ConcreteClass1())
     print("")
 

@@ -24,15 +24,15 @@ class SingletonMeta(type):
 
 
 class Singleton(metaclass=SingletonMeta):
-    def some_business_logic(self):
-        """
-        Finally, any singleton should define some business logic, which can be
-        executed on its instance.
-        """
-
-        # ...
-    def getid(self):
-        return "MyUniqueID"
+    def ObtenerCUIT(self):
+        cuit=" "
+        genero=input(print("Que genero sos"))
+        if (genero == "m" or genero== "M"):
+            cuit = "1-42477160"
+        else:
+            if (genero == "f" or genero== "F"):
+               cuit = "2-42477160"
+        return cuit
 
 if __name__ == "__main__":
     # The client code.
@@ -42,7 +42,7 @@ if __name__ == "__main__":
 
     if id(s1) == id(s2):
         print("Singleton works, both variables contain the same instance.")
-        print(s1.getid())
+        print(s1.ObtenerCUIT())
     else:
         print("Singleton failed, variables contain different instances.")
 
