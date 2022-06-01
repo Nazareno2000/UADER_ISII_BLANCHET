@@ -26,11 +26,20 @@ def sender(VGA: "VGA") :
     print(VGA.conexion())
 
 
+def senderHD(HD: "HD") :
+    print(HD.serial_open())
+
+
+
+
 
 
 Vga = VGA()
 sender(Vga)
 
+hd = HD()
+senderHD(hd)
 adapter= AdapterVGA2HD()
 
-sender(adapter)
+sender( AdapterVGA2HD()
+)
