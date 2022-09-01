@@ -7,7 +7,7 @@ import json, sys
 version='1.0'
  
 if len(sys.argv)==1:
-    print('no se puede ejecutar')
+    print('no se puede eJecutar')
     sys.exit()
 
 if len(sys.argv)==2:
